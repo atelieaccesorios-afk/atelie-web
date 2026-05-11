@@ -29,7 +29,7 @@ const compromiso = Array.from({ length: 54 }, (_, i) => {
   return {
     id: i + 1,
     name: `Ref ${refNum}`,
-    img: process.env.PUBLIC_URL + `/catalogo/ref${refNum}.jpg`,
+    img: process.env.PUBLIC_URL + `/catalogo/${refNum}.png`,
   };
 });
 
@@ -38,7 +38,7 @@ const matrimonio = Array.from({ length: 75 }, (_, i) => {
   return {
     id: 100 + i,
     name: `Ref ${refNum}`,
-    img: process.env.PUBLIC_URL + `/catalogo/ref${refNum}.jpg`,
+    img: process.env.PUBLIC_URL + `/catalogo/${refNum}.png`,
   };
 });
 
@@ -220,7 +220,7 @@ export default function AtelieWebsite() {
       </a>
 
       <header style={{ borderBottom: "1px solid #f9f9f9", padding: "10px 5%", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", position: "sticky", top: 0, zIndex: 1000 }}>
-        <img src="/atelie_Logo.png" alt="Logotipo Atelié Joyería - Anillos de compromiso y argollas de matrimonio" style={{ height: "120px", width: "auto", cursor: "pointer" }} onClick={() => { setView("home"); window.scrollTo(0, 0); }} />
+        <img src={process.env.PUBLIC_URL + "/atelie_Logo.png"} alt="Logotipo Atelié Joyería - Anillos de compromiso y argollas de matrimonio" style={{ height: "120px", width: "auto", cursor: "pointer" }} onClick={() => { setView("home"); window.scrollTo(0, 0); }} />
         <nav style={{ display: "flex", flexWrap: "wrap", gap: "35px", cursor: "pointer", fontWeight: "600", fontSize: "14px", letterSpacing: "1px", alignItems: "center" }}>
           <a href="/" onClick={(e) => { e.preventDefault(); setView("home"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>INICIO</a>
           <a href="/nosotros" onClick={(e) => { e.preventDefault(); setView("nosotros"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>NOSOTROS</a>
@@ -236,7 +236,7 @@ export default function AtelieWebsite() {
         <main>
           {/* HERO SECTION */}
           <section style={{ height: "80vh", position: "relative", overflow: "hidden" }}>
-            <img src="/hero-inicio.jpg" alt="Pareja con anillo de compromiso Atelié Joyería oro 18k" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "left center" }} />
+            <img src={process.env.PUBLIC_URL + "/hero-inicio.jpg"} alt="Pareja con anillo de compromiso Atelié Joyería oro 18k" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "left center" }} />
             <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.25)", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", color: "white", padding: "0 6%" }}>
               <div style={{ textAlign: "left", maxWidth: "480px" }}>
                 <span style={{ fontSize: "12px", fontWeight: "600", color: "#d4af37", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>— ANILLOS QUE MARCAN TU HISTORIA</span>
@@ -285,7 +285,7 @@ export default function AtelieWebsite() {
                    onMouseEnter={(e) => { e.currentTarget.querySelector('.arrow-c').style.transform = 'translateX(8px)'; }}
                    onMouseLeave={(e) => { e.currentTarget.querySelector('.arrow-c').style.transform = 'translateX(0)'; }}>
                 <div style={{ width: "100%", height: "200px", overflow: "hidden", borderRadius: "10px" }}>
-                  <img src="/compromiso.png" alt="Colección de anillos de compromiso Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
+                  <img src={process.env.PUBLIC_URL + "/catalogo/compromiso.png"} alt="Colección de anillos de compromiso Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
                 </div>
                 <div>
                   <h2 style={{ fontSize: "18px", fontWeight: "bold", letterSpacing: "2px", marginBottom: "8px", color: "#222", fontFamily: "'Times New Roman', Times, serif" }}>ANILLOS DE COMPROMISO</h2>
@@ -302,7 +302,7 @@ export default function AtelieWebsite() {
                    onMouseEnter={(e) => { e.currentTarget.querySelector('.arrow-m').style.transform = 'translateX(8px)'; }}
                    onMouseLeave={(e) => { e.currentTarget.querySelector('.arrow-m').style.transform = 'translateX(0)'; }}>
                 <div style={{ width: "100%", height: "200px", overflow: "hidden", borderRadius: "10px" }}>
-                  <img src="/matrimonio.png" alt="Colección de argollas de matrimonio Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
+                  <img src={process.env.PUBLIC_URL + "/catalogo/matrimonio.png"} alt="Colección de argollas de matrimonio Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
                 </div>
                 <div>
                   <h2 style={{ fontSize: "18px", fontWeight: "bold", letterSpacing: "2px", marginBottom: "8px", color: "#222", fontFamily: "'Times New Roman', Times, serif" }}>ARGOLLAS DE MATRIMONIO</h2>
@@ -319,7 +319,7 @@ export default function AtelieWebsite() {
                    onMouseEnter={(e) => { e.currentTarget.querySelector('.arrow-d').style.transform = 'translateX(8px)'; }}
                    onMouseLeave={(e) => { e.currentTarget.querySelector('.arrow-d').style.transform = 'translateX(0)'; }}>
                 <div style={{ width: "100%", height: "200px", overflow: "hidden", borderRadius: "10px" }}>
-                  <img src="/diseños.png" alt="Diseños personalizados Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
+                  <img src={process.env.PUBLIC_URL + "/catalogo/disenos.png"} alt="Diseños personalizados Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
                 </div>
                 <div>
                   <h2 style={{ fontSize: "18px", fontWeight: "bold", letterSpacing: "2px", marginBottom: "8px", color: "#222", fontFamily: "'Times New Roman', Times, serif" }}>DISEÑOS PERSONALIZADOS</h2>
@@ -404,7 +404,7 @@ export default function AtelieWebsite() {
 
           {/* SECCIÓN TALLER */}
           <section style={{ height: "60vh", position: "relative", overflow: "hidden" }}>
-            <img src="/nosotros-atelie.jpg" alt="Taller Atelié" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={process.env.PUBLIC_URL + "/nosotros-atelie.jpg"} alt="Taller Atelié" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.6)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "0 20px", color: "white" }}>
               <div style={{ textAlign: "center", maxWidth: "600px" }}>
                 <h2 style={{ fontWeight: "bold", fontSize: "42px", letterSpacing: "2px", margin: 0, fontFamily: "'Times New Roman', Times, serif" }}>Diseñamos historias</h2>
@@ -458,9 +458,9 @@ export default function AtelieWebsite() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center", marginBottom: "70px" }}>
               <div 
                 style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 10px 40px rgba(0,0,0,0.08)", border: "1px solid #f0f0f0", cursor: "pointer" }}
-                onClick={() => setSelectedImage("/nosotros-atelie.jpg")}
+                onClick={() => setSelectedImage(process.env.PUBLIC_URL + "/nosotros-atelie.jpg")}
               >
-                <img src="/nosotros-atelie.jpg" alt="ATELIÊ — equipo y taller" 
+                <img src={process.env.PUBLIC_URL + "/nosotros-atelie.jpg"} alt="ATELIÊ — equipo y taller" 
                   style={{ width: "100%", height: "auto", display: "block", transition: "transform 0.3s ease" }} 
                   onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.03)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"} />
               </div>
@@ -485,9 +485,9 @@ export default function AtelieWebsite() {
               <div style={{ order: 2 }}>
                 <div 
                   style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 10px 40px rgba(0,0,0,0.08)", border: "1px solid #f0f0f0", cursor: "pointer" }}
-                  onClick={() => setSelectedImage("/Proceso artesanal.png")}
+                  onClick={() => setSelectedImage(process.env.PUBLIC_URL + "/Proceso artesanal.png")}
                 >
-                  <img src="/Proceso artesanal.png" alt="Proceso artesanal Atelié" 
+                  <img src={process.env.PUBLIC_URL + "/Proceso artesanal.png"} alt="Proceso artesanal Atelié" 
                     style={{ width: "100%", height: "auto", display: "block", transition: "transform 0.3s ease" }} 
                     onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.03)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"} />
                 </div>
@@ -506,9 +506,9 @@ export default function AtelieWebsite() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center" }}>
               <div 
                 style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 10px 40px rgba(0,0,0,0.08)", border: "1px solid #f0f0f0", cursor: "pointer" }}
-                onClick={() => setSelectedImage("/relacion.png")}
+                onClick={() => setSelectedImage(process.env.PUBLIC_URL + "/relacion.png")}
               >
-                <img src="/relacion.png" alt="Relación permanente — servicios de cuidado" 
+                <img src={process.env.PUBLIC_URL + "/relacion.png"} alt="Relación permanente — servicios de cuidado" 
                   style={{ width: "100%", height: "auto", display: "block", transition: "transform 0.3s ease" }} 
                   onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.03)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"} />
               </div>
@@ -560,9 +560,9 @@ export default function AtelieWebsite() {
           <h2 style={{ textAlign: "center", fontWeight: "bold", marginBottom: "50px", letterSpacing: "3px", fontFamily: "'Times New Roman', Times, serif" }}>SERVICIOS ESPECIALIZADOS</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "40px", marginBottom: "80px" }}>
             {[
-              { title: "REPARACIÓN", img: "/reparacion.jpg" },
-              { title: "RESTAURACIÓN", img: "/restauracion.jpg" },
-              { title: "MANTENIMIENTO", img: "/mantenimiento.jpg" }
+              { title: "REPARACIÓN", img: process.env.PUBLIC_URL + "/reparacion.jpg" },
+              { title: "RESTAURACIÓN", img: process.env.PUBLIC_URL + "/restauracion.jpg" },
+              { title: "MANTENIMIENTO", img: process.env.PUBLIC_URL + "/mantenimiento.jpg" }
             ].map((item, idx) => (
               <div key={idx} style={{ textAlign: "center" }}>
                 <div style={{ borderRadius: "15px", height: "300px", marginBottom: "20px", overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}>
@@ -630,7 +630,7 @@ export default function AtelieWebsite() {
             {/* Columna Izquierda: Imagen */}
             <div style={{ flex: "0.7", minWidth: "280px", textAlign: "center", position: "sticky", top: "120px" }}>
               <div style={{ background: "#fdfdfd", padding: "20px", borderRadius: "20px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
-                <img src={quotedImage || "/atelie_Logo.png"} alt="Referencia" style={{ width: "100%", maxHeight: "320px", objectFit: "contain", borderRadius: "10px" }} />
+                <img src={quotedImage || (process.env.PUBLIC_URL + "/atelie_Logo.png")} alt="Referencia" style={{ width: "100%", maxHeight: "320px", objectFit: "contain", borderRadius: "10px" }} />
                 <p style={{ marginTop: "15px", fontWeight: "600", color: "#d4af37", letterSpacing: "1px" }}>{referencia || "Personaliza tu joya"}</p>
               </div>
             </div>
