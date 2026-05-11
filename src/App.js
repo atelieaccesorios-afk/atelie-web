@@ -29,7 +29,7 @@ const compromiso = Array.from({ length: 54 }, (_, i) => {
   return {
     id: i + 1,
     name: `Ref ${refNum}`,
-    img: `/catalogo/ref${refNum}.jpg`,
+    img: process.env.PUBLIC_URL + `/catalogo/ref${refNum}.jpg`,
   };
 });
 
@@ -38,7 +38,7 @@ const matrimonio = Array.from({ length: 75 }, (_, i) => {
   return {
     id: 100 + i,
     name: `Ref ${refNum}`,
-    img: `/catalogo/ref${refNum}.jpg`,
+    img: process.env.PUBLIC_URL + `/catalogo/ref${refNum}.jpg`,
   };
 });
 
@@ -254,7 +254,7 @@ export default function AtelieWebsite() {
           {/* SECCIÓN RECONOCIMIENTOS */}
           <section style={{ padding: "40px 24px", background: "#f9f9f9", textAlign: "center", borderBottom: "1px solid #eee" }}>
             <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
-              <img src="/wedding awards.png" alt="Wedding Awards Matrimonio.com.co Atelié Joyería" style={{ height: "150px", marginBottom: "10px", width: "auto" }} />
+              <img src={process.env.PUBLIC_URL + "/wedding%20awards.png"} alt="Wedding Awards Matrimonio.com.co Atelié Joyería" style={{ height: "150px", marginBottom: "10px", width: "auto" }} />
               <h2 style={{ fontSize: "22px", fontWeight: "bold", fontFamily: "'Times New Roman', Times, serif", color: "#222", letterSpacing: "1px", margin: 0 }}>
                 RECONOCIDOS POR NUESTRA CALIDAD Y SERVICIO
               </h2>
@@ -543,7 +543,7 @@ export default function AtelieWebsite() {
           {/* SECCIÓN RECONOCIMIENTOS */}
           <section style={{ padding: "30px 24px", background: "#f9f9f9", textAlign: "center", borderBottom: "1px solid #eee" }}>
             <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
-              <img src="/wedding awards.png" alt="Wedding Awards Matrimonio.com.co Atelié Joyería" style={{ height: "150px", marginBottom: "10px", width: "auto" }} />
+              <img src={process.env.PUBLIC_URL + "/wedding%20awards.png"} alt="Wedding Awards Matrimonio.com.co Atelié Joyería" style={{ height: "150px", marginBottom: "10px", width: "auto" }} />
               <h2 style={{ fontSize: "22px", fontWeight: "bold", fontFamily: "'Times New Roman', Times, serif", color: "#222", letterSpacing: "1px", margin: 0 }}>
                 RECONOCIDOS POR NUESTRA CALIDAD Y SERVICIO
               </h2>
