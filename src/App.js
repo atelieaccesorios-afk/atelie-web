@@ -226,7 +226,7 @@ export default function AtelieWebsite() {
         {showContactMenu && (
           <>
             {/* Opción Correo Electrónico */}
-            <a href="mailto:atelie.joyeria@gmail.com" 
+            <a href="mailto:contacto@atelie.com.co" 
               title="Enviar Correo"
               style={{ 
                 backgroundColor: "#EA4335", color: "white", width: "50px", height: "50px", borderRadius: "50px", 
@@ -264,16 +264,16 @@ export default function AtelieWebsite() {
         </button>
       </div>
 
-      <header style={{ borderBottom: "1px solid #f9f9f9", padding: "10px 5%", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", position: "sticky", top: 0, zIndex: 1000 }}>
-        <img src={process.env.PUBLIC_URL + "/atelie_Logo.png"} alt="Logotipo Atelié Joyería - Anillos de compromiso y argollas de matrimonio" style={{ height: "120px", width: "auto", cursor: "pointer" }} onClick={() => { setView("home"); window.scrollTo(0, 0); }} />
-        <nav style={{ display: "flex", flexWrap: "wrap", gap: "35px", cursor: "pointer", fontWeight: "600", fontSize: "14px", letterSpacing: "1px", alignItems: "center" }}>
+      <header style={{ borderBottom: "1px solid #f9f9f9", padding: isMobile ? "8px 15px" : "10px 5%", display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: "space-between", alignItems: "center", background: "#fff", position: "sticky", top: 0, zIndex: 1000, gap: isMobile ? "8px" : "0" }}>
+        <img src={process.env.PUBLIC_URL + "/atelie_Logo.png"} alt="Logotipo Atelié Joyería - Anillos de compromiso y argollas de matrimonio" style={{ height: isMobile ? "50px" : "120px", width: "auto", cursor: "pointer" }} onClick={() => { setView("home"); window.scrollTo(0, 0); }} />
+        <nav style={{ display: "flex", flexWrap: "wrap", gap: isMobile ? "12px" : "35px", cursor: "pointer", fontWeight: "600", fontSize: isMobile ? "10px" : "14px", letterSpacing: "1px", alignItems: "center", justifyContent: isMobile ? "center" : "flex-end" }}>
           <a href="/" onClick={(e) => { e.preventDefault(); setView("home"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>INICIO</a>
           <a href="/nosotros" onClick={(e) => { e.preventDefault(); setView("nosotros"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>NOSOTROS</a>
-          <a href="/anillos-compromiso" onClick={(e) => { e.preventDefault(); setView("compromiso"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>ANILLOS DE COMPROMISO</a>
-          <a href="/argollas-matrimonio" onClick={(e) => { e.preventDefault(); setView("matrimonio"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>ARGOLLAS DE MATRIMONIO</a>
+          <a href="/anillos-compromiso" onClick={(e) => { e.preventDefault(); setView("compromiso"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>{isMobile ? "COMPROMISO" : "ANILLOS DE COMPROMISO"}</a>
+          <a href="/argollas-matrimonio" onClick={(e) => { e.preventDefault(); setView("matrimonio"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>{isMobile ? "MATRIMONIO" : "ARGOLLAS DE MATRIMONIO"}</a>
           <a href="/servicios" onClick={(e) => { e.preventDefault(); setView("servicios"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>SERVICIOS</a>
           <a href="/agendar" onClick={(e) => { e.preventDefault(); setView("agendar"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>CITAS</a>
-          <button style={{ ...botonPrincipal, padding: "10px 24px", fontSize: "13px" }} onClick={() => { setView("personalizar"); setTipoProducto("compromiso"); setReferencia("Diseño Cliente"); setQuotedImage(null); window.scrollTo(0, 0); }} onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>COTIZAR</button>
+          <button style={{ ...botonPrincipal, padding: isMobile ? "6px 15px" : "10px 24px", fontSize: isMobile ? "11px" : "13px" }} onClick={() => { setView("personalizar"); setTipoProducto("compromiso"); setReferencia("Diseño Cliente"); setQuotedImage(null); window.scrollTo(0, 0); }} onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.05)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>COTIZAR</button>
         </nav>
       </header>
 
@@ -869,7 +869,7 @@ export default function AtelieWebsite() {
             <h4 style={{ color: "#d4af37", marginBottom: "30px", letterSpacing: "2px" }}>SÍGUENOS</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "25px" }}>
               <a href={`https://wa.me/${WHATSAPP_NUMERO}`} target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaWhatsapp size={22} /> WhatsApp Ateliê</a>
-              <a href="mailto:atelie.joyeria@atelie.com.co" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaEnvelope size={22} /> atelie.joyeria@atelie.com.co</a>
+              <a href="mailto:contacto@atelie.com.co" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaEnvelope size={22} /> contacto@atelie.com.co</a>
               <a href="https://instagram.com" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaInstagram size={22} /> Instagram</a>
               <a href="https://facebook.com" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaFacebook size={22} /> Facebook</a>
             </div>
