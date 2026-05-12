@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaInstagram, FaFacebook, FaWhatsapp, FaTools, FaLeaf, FaShieldAlt, FaTruck, FaStar, FaAward } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaWhatsapp, FaTools, FaLeaf, FaShieldAlt, FaTruck, FaStar, FaAward, FaEnvelope, FaComments, FaPlus } from "react-icons/fa";
 import { GiCutDiamond, GiEmerald, GiHammerBreak } from "react-icons/gi";
 
 const WHATSAPP_NUMERO = "573162559987";
@@ -74,6 +74,7 @@ export default function AtelieWebsite() {
   const [tipoProducto, setTipoProducto] = useState("compromiso");
   const [citaFecha, setCitaFecha] = useState("");
   const [citaHora, setCitaHora] = useState("");
+  const [showContactMenu, setShowContactMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -220,11 +221,48 @@ export default function AtelieWebsite() {
   return (
     <div style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", background: "#fff", color: "#111", position: "relative" }}>
 
-      <a href={`https://wa.me/${WHATSAPP_NUMERO}`} target="_blank" rel="noreferrer"
-        style={{ position: "fixed", bottom: "30px", right: "30px", backgroundColor: "#25d366", color: "white", width: "60px", height: "60px", borderRadius: "50px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "30px", boxShadow: "0 4px 10px rgba(0,0,0,0.3)", zIndex: 2000, transition: "transform 0.3s ease" }}
-        onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.1)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>
-        <FaWhatsapp />
-      </a>
+      {/* BOTÓN FLOTANTE MULTI-OPCIÓN (WhatsApp + Email) */}
+      <div style={{ position: "fixed", bottom: "30px", right: "30px", zIndex: 2000, display: "flex", flexDirection: "column", alignItems: "center", gap: "15px" }}>
+        {showContactMenu && (
+          <>
+            {/* Opción Correo Electrónico */}
+            <a href="mailto:atelie.joyeria@gmail.com" 
+              title="Enviar Correo"
+              style={{ 
+                backgroundColor: "#EA4335", color: "white", width: "50px", height: "50px", borderRadius: "50px", 
+                display: "flex", alignItems: "center", justifyContent: "center", fontSize: "24px", 
+                boxShadow: "0 4px 10px rgba(0,0,0,0.3)", transition: "all 0.3s ease" 
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.1)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>
+              <FaEnvelope />
+            </a>
+            
+            {/* Opción WhatsApp */}
+            <a href={`https://wa.me/${WHATSAPP_NUMERO}`} target="_blank" rel="noreferrer"
+              title="WhatsApp"
+              style={{ 
+                backgroundColor: "#25d366", color: "white", width: "50px", height: "50px", borderRadius: "50px", 
+                display: "flex", alignItems: "center", justifyContent: "center", fontSize: "24px", 
+                boxShadow: "0 4px 10px rgba(0,0,0,0.3)", transition: "all 0.3s ease" 
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.1)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>
+              <FaWhatsapp />
+            </a>
+          </>
+        )}
+        
+        {/* Botón Principal (Disparador) */}
+        <button 
+          onClick={() => setShowContactMenu(!showContactMenu)}
+          style={{ 
+            backgroundColor: "#d4af37", color: "black", width: "60px", height: "60px", borderRadius: "50px", 
+            display: "flex", alignItems: "center", justifyContent: "center", fontSize: "30px", 
+            boxShadow: "0 4px 10px rgba(0,0,0,0.3)", border: "none", cursor: "pointer", transition: "transform 0.3s ease" 
+          }}
+          onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.1)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>
+          {showContactMenu ? <FaPlus style={{ transform: "rotate(45deg)" }} /> : <FaComments />}
+        </button>
+      </div>
 
       <header style={{ borderBottom: "1px solid #f9f9f9", padding: "10px 5%", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", position: "sticky", top: 0, zIndex: 1000 }}>
         <img src={process.env.PUBLIC_URL + "/atelie_Logo.png"} alt="Logotipo Atelié Joyería - Anillos de compromiso y argollas de matrimonio" style={{ height: "120px", width: "auto", cursor: "pointer" }} onClick={() => { setView("home"); window.scrollTo(0, 0); }} />
@@ -831,6 +869,7 @@ export default function AtelieWebsite() {
             <h4 style={{ color: "#d4af37", marginBottom: "30px", letterSpacing: "2px" }}>SÍGUENOS</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "25px" }}>
               <a href={`https://wa.me/${WHATSAPP_NUMERO}`} target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaWhatsapp size={22} /> WhatsApp Ateliê</a>
+              <a href="mailto:atelie.joyeria@atelie.com.co" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaEnvelope size={22} /> atelie.joyeria@atelie.com.co</a>
               <a href="https://instagram.com" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaInstagram size={22} /> Instagram</a>
               <a href="https://facebook.com" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaFacebook size={22} /> Facebook</a>
             </div>
