@@ -74,6 +74,13 @@ export default function AtelieWebsite() {
   const [tipoProducto, setTipoProducto] = useState("compromiso");
   const [citaFecha, setCitaFecha] = useState("");
   const [citaHora, setCitaHora] = useState("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Mejora SEO: Cambiar el título de la página dinámicamente
   useEffect(() => {
@@ -235,14 +242,14 @@ export default function AtelieWebsite() {
       {view === "home" && (
         <main>
           {/* HERO SECTION */}
-          <section style={{ height: "80vh", position: "relative", overflow: "hidden" }}>
-            <img src={process.env.PUBLIC_URL + "/hero-inicio.jpg"} alt="Pareja con anillo de compromiso Atelié Joyería oro 18k" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "left center" }} />
-            <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.25)", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", color: "white", padding: "0 6%" }}>
-              <div style={{ textAlign: "left", maxWidth: "480px" }}>
+          <section style={{ height: isMobile ? "60vh" : "80vh", position: "relative", overflow: "hidden" }}>
+            <img src={process.env.PUBLIC_URL + "/hero-inicio.jpg"} alt="Pareja con anillo de compromiso Atelié Joyería oro 18k" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center" : "left center" }} />
+            <div style={{ position: "absolute", inset: 0, background: isMobile ? "rgba(0,0,0,0.4)" : "rgba(0,0,0,0.25)", display: "flex", flexDirection: "column", alignItems: isMobile ? "center" : "flex-start", justifyContent: "center", color: "white", padding: isMobile ? "0 20px" : "0 6%" }}>
+              <div style={{ textAlign: isMobile ? "center" : "left", maxWidth: "480px" }}>
                 <span style={{ fontSize: "12px", fontWeight: "600", color: "#d4af37", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>— ANILLOS QUE MARCAN TU HISTORIA</span>
                 <h1 style={{ fontWeight: "300", fontSize: "clamp(22px, 3.8vw, 38px)", marginBottom: "12px", letterSpacing: "2px", lineHeight: "1.2", fontFamily: "'Times New Roman', Times, serif" }}>Anillos de compromiso<br />y argollas de matrimonio en <span style={{ color: "#d4af37" }}>oro 18K</span></h1>
                 <p style={{ fontSize: "clamp(12px, 1.3vw, 15px)", marginBottom: "30px", fontWeight: "300", opacity: 0.85, lineHeight: "1.6" }}>Diseñamos piezas únicas que representan momentos<br />inolvidables con elegancia, calidad y{"\u00A0"}significado</p>
-                <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", justifyContent: "flex-start" }}>
+                <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", justifyContent: isMobile ? "center" : "flex-start" }}>
                   <button style={botonPrincipal} onClick={() => { document.getElementById('colecciones')?.scrollIntoView({ behavior: 'smooth' }); }}>Explora nuestra colección</button>
                   <button style={{ ...botonWhatsapp, display: "flex", alignItems: "center", gap: "10px" }} onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMERO}`, "_blank")}><FaWhatsapp size={20} /> Te ayudamos a elegir</button>
                 </div>
