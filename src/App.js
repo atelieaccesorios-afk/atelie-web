@@ -265,7 +265,7 @@ export default function AtelieWebsite() {
       </div>
 
       <header style={{ borderBottom: "1px solid #f9f9f9", padding: isMobile ? "8px 15px" : "10px 5%", display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: "space-between", alignItems: "center", background: "#fff", position: "sticky", top: 0, zIndex: 1000, gap: isMobile ? "8px" : "0" }}>
-        <img src={process.env.PUBLIC_URL + "/atelie_Logo.png"} alt="Logotipo Atelié Joyería - Anillos de compromiso y argollas de matrimonio" style={{ height: isMobile ? "50px" : "120px", width: "auto", cursor: "pointer" }} onClick={() => { setView("home"); window.scrollTo(0, 0); }} />
+        <img src={process.env.PUBLIC_URL + "/atelie_Logo.png"} alt="Logotipo Atelié Joyería - Anillos de compromiso y argollas de matrimonio" style={{ height: isMobile ? "75px" : "120px", width: "auto", cursor: "pointer" }} onClick={() => { setView("home"); window.scrollTo(0, 0); }} />
         <nav style={{ display: "flex", flexWrap: "wrap", gap: isMobile ? "12px" : "35px", cursor: "pointer", fontWeight: "600", fontSize: isMobile ? "10px" : "14px", letterSpacing: "1px", alignItems: "center", justifyContent: isMobile ? "center" : "flex-end" }}>
           <a href="/" onClick={(e) => { e.preventDefault(); setView("home"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>INICIO</a>
           <a href="/nosotros" onClick={(e) => { e.preventDefault(); setView("nosotros"); window.scrollTo(0, 0); }} style={{ textDecoration: "none", color: "inherit" }}>NOSOTROS</a>
@@ -286,7 +286,7 @@ export default function AtelieWebsite() {
               <div style={{ textAlign: isMobile ? "center" : "left", maxWidth: "480px" }}>
                 <span style={{ fontSize: "12px", fontWeight: "600", color: "#d4af37", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>— ANILLOS QUE MARCAN TU HISTORIA</span>
                 <h1 style={{ fontWeight: "300", fontSize: "clamp(22px, 3.8vw, 38px)", marginBottom: "12px", letterSpacing: "2px", lineHeight: "1.2", fontFamily: "'Times New Roman', Times, serif" }}>Anillos de compromiso<br />y argollas de matrimonio en <span style={{ color: "#d4af37" }}>oro 18K</span></h1>
-                <p style={{ fontSize: "clamp(12px, 1.3vw, 15px)", marginBottom: "30px", fontWeight: "300", opacity: 0.85, lineHeight: "1.6" }}>Diseñamos piezas únicas que representan momentos<br />inolvidables con elegancia, calidad y{"\u00A0"}significado</p>
+                <p style={{ fontSize: "clamp(12px, 1.3vw, 15px)", marginBottom: "30px", fontWeight: "300", opacity: 0.85, lineHeight: "1.6" }}>Diseñamos piezas únicas en Medellín que representan<br />momentos inolvidables con elegancia, calidad y significado.</p>
                 <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", justifyContent: isMobile ? "center" : "flex-start" }}>
                   <button style={botonPrincipal} onClick={() => { document.getElementById('colecciones')?.scrollIntoView({ behavior: 'smooth' }); }}>Explora nuestra colección</button>
                   <button style={{ ...botonWhatsapp, display: "flex", alignItems: "center", gap: "10px" }} onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMERO}`, "_blank")}><FaWhatsapp size={20} /> Te ayudamos a elegir</button>
@@ -454,7 +454,7 @@ export default function AtelieWebsite() {
               <div style={{ textAlign: "center", maxWidth: "600px" }}>
                 <h2 style={{ fontWeight: "bold", fontSize: "42px", letterSpacing: "2px", margin: 0, fontFamily: "'Times New Roman', Times, serif" }}>Diseñamos historias</h2>
                 <h2 style={{ fontWeight: "bold", fontSize: "42px", letterSpacing: "2px", marginBottom: "20px", color: "#d4af37", fontFamily: "'Times New Roman', Times, serif" }}>que perduran</h2>
-                <p style={{ marginBottom: "35px", fontSize: "18px", opacity: 0.9 }}>En nuestro taller, cada detalle importa. Creamos más que joyas, creamos recuerdos.</p>
+                <p style={{ marginBottom: "35px", fontSize: "18px", opacity: 0.9 }}>En nuestro taller en Medellín, cada detalle importa. Creamos más que joyas, creamos recuerdos.</p>
                 <button style={botonPrincipal} onClick={() => { setView("agendar"); window.scrollTo(0,0); }}>Diseña tu anillo con nosotros</button>
               </div>
             </div>
@@ -489,7 +489,7 @@ export default function AtelieWebsite() {
             <h2 style={{ textAlign: "center", fontWeight: "bold", marginBottom: "35px", letterSpacing: "4px", fontFamily: "'Times New Roman', Times, serif" }}>QUIÉNES SOMOS</h2>
             <div style={{ textAlign: "justify", maxWidth: "900px", margin: "0 auto 40px", fontSize: "16px", lineHeight: "1.6", color: "#444", display: "flex", flexDirection: "column", gap: "10px" }}>
               <p style={{ margin: 0 }}>
-                ATELIÊ es una marca familiar fundada en 2010, donde la tradición artesanal y el diseño contemporáneo se unen para crear joyas que trascienden el tiempo.
+                ATELIÊ es una marca familiar fundada en 2010 en Medellín, donde la tradición artesanal y el diseño contemporáneo se unen para crear joyas que trascienden el tiempo.
               </p>
               <p style={{ margin: 0 }}>
                 Nos especializamos en el diseño y fabricación de anillos de compromiso y argollas de matrimonio en oro de 18K, 14K, 10K y plata 950, elaboradas cuidadosamente para representar historias únicas e irrepetibles.
