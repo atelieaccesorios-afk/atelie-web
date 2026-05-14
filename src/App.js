@@ -104,6 +104,14 @@ export default function AtelieWebsite() {
       document.head.appendChild(link);
     }
     link.href = "https://www.atelie.com.co/";
+
+    // Notificar a Google Analytics sobre el cambio de "página" (vista interna)
+    if (window.gtag) {
+      window.gtag('config', 'G-8SV0LXTJ22', {
+        page_title: document.title,
+        page_path: `/${view === 'home' ? '' : view}`,
+      });
+    }
   }, [view]);
 
   const botonPrincipal = {
