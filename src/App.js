@@ -298,7 +298,7 @@ export default function AtelieWebsite() {
         <main>
           {/* HERO SECTION */}
           <section style={{ height: isMobile ? "60vh" : "80vh", position: "relative", overflow: "hidden" }}>
-            <img src={process.env.PUBLIC_URL + "/hero-inicio.jpg"} alt="Pareja con anillo de compromiso Atelié Joyería oro 18k" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center" : "left center" }} />
+            <img src={process.env.PUBLIC_URL + "/hero-inicio.webp"} alt="Pareja con anillo de compromiso Atelié Joyería oro 18k" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center" : "left center" }} />
             <div style={{ position: "absolute", inset: 0, background: isMobile ? "rgba(0,0,0,0.4)" : "rgba(0,0,0,0.25)", display: "flex", flexDirection: "column", alignItems: isMobile ? "center" : "flex-start", justifyContent: "center", color: "white", padding: isMobile ? "0 20px" : "0 6%" }}>
               <div style={{ textAlign: isMobile ? "center" : "left", maxWidth: "480px" }}>
                 <span style={{ fontSize: "12px", fontWeight: "600", color: "#d4af37", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>— ANILLOS QUE MARCAN TU HISTORIA</span>
