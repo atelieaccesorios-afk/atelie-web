@@ -347,7 +347,7 @@ export default function AtelieWebsite() {
                    onMouseEnter={(e) => { e.currentTarget.querySelector('.arrow-c').style.transform = 'translateX(8px)'; }}
                    onMouseLeave={(e) => { e.currentTarget.querySelector('.arrow-c').style.transform = 'translateX(0)'; }}>
                 <div style={{ width: "100%", height: "200px", overflow: "hidden", borderRadius: "10px" }}>
-                  <img src={process.env.PUBLIC_URL + "/catalogo/compromiso.png"} alt="Colección de anillos de compromiso Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
+                  <img src={process.env.PUBLIC_URL + "/catalogo/compromiso.png"} loading="lazy" alt="Colección de anillos de compromiso Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
                 </div>
                 <div>
                   <h2 style={{ fontSize: "18px", fontWeight: "bold", letterSpacing: "2px", marginBottom: "8px", color: "#222", fontFamily: "'Times New Roman', Times, serif" }}>ANILLOS DE COMPROMISO</h2>
@@ -364,7 +364,7 @@ export default function AtelieWebsite() {
                    onMouseEnter={(e) => { e.currentTarget.querySelector('.arrow-m').style.transform = 'translateX(8px)'; }}
                    onMouseLeave={(e) => { e.currentTarget.querySelector('.arrow-m').style.transform = 'translateX(0)'; }}>
                 <div style={{ width: "100%", height: "200px", overflow: "hidden", borderRadius: "10px" }}>
-                  <img src={process.env.PUBLIC_URL + "/catalogo/matrimonio.png"} alt="Colección de argollas de matrimonio Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
+                  <img src={process.env.PUBLIC_URL + "/catalogo/matrimonio.png"} loading="lazy" alt="Colección de argollas de matrimonio Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
                 </div>
                 <div>
                   <h2 style={{ fontSize: "18px", fontWeight: "bold", letterSpacing: "2px", marginBottom: "8px", color: "#222", fontFamily: "'Times New Roman', Times, serif" }}>ARGOLLAS DE MATRIMONIO</h2>
@@ -381,7 +381,7 @@ export default function AtelieWebsite() {
                    onMouseEnter={(e) => { e.currentTarget.querySelector('.arrow-d').style.transform = 'translateX(8px)'; }}
                    onMouseLeave={(e) => { e.currentTarget.querySelector('.arrow-d').style.transform = 'translateX(0)'; }}>
                 <div style={{ width: "100%", height: "200px", overflow: "hidden", borderRadius: "10px" }}>
-                  <img src={process.env.PUBLIC_URL + "/catalogo/disenos.png"} alt="Diseños personalizados Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
+                  <img src={process.env.PUBLIC_URL + "/catalogo/disenos.png"} loading="lazy" alt="Diseños personalizados Atelié Joyería" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }} />
                 </div>
                 <div>
                   <h2 style={{ fontSize: "18px", fontWeight: "bold", letterSpacing: "2px", marginBottom: "8px", color: "#222", fontFamily: "'Times New Roman', Times, serif" }}>DISEÑOS PERSONALIZADOS</h2>
@@ -670,7 +670,7 @@ export default function AtelieWebsite() {
                   onClick={() => setSelectedImage(p.img)}
                 >
                   {p.img ? (
-                    <img src={p.img} alt={`${p.name} - Joyería Atelié Anillo en oro 18k`} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
+                    <img src={p.img} loading="lazy" alt={`${p.name} - Joyería Atelié Anillo en oro 18k`} style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
                   ) : null}
                 </div>
                 <h4 style={{ marginBottom: "10px", fontSize: "14px", fontWeight: "500" }}>{p.name}</h4>
