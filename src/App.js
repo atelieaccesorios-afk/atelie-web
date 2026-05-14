@@ -29,7 +29,7 @@ const compromiso = Array.from({ length: 54 }, (_, i) => {
   return {
     id: i + 1,
     name: `Ref ${refNum}`,
-    img: process.env.PUBLIC_URL + `/catalogo/${refNum}.png`,
+    img: process.env.PUBLIC_URL + `/catalogo/${refNum}.webp`,
   };
 });
 
@@ -38,7 +38,7 @@ const matrimonio = Array.from({ length: 75 }, (_, i) => {
   return {
     id: 100 + i,
     name: `Ref ${refNum}`,
-    img: process.env.PUBLIC_URL + `/catalogo/${refNum}.png`,
+    img: process.env.PUBLIC_URL + `/catalogo/${refNum}.webp`,
   };
 });
 
