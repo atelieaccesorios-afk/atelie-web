@@ -95,6 +95,15 @@ export default function AtelieWebsite() {
       agendar: "Agendar Cita de Diseño | Atención Personalizada Atelié"
     };
     document.title = titulos[view] || "Atelié Joyería";
+
+    // Manejo de la etiqueta canonical para SEO
+    let link = document.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = "https://www.atelie.com.co/";
   }, [view]);
 
   const botonPrincipal = {
