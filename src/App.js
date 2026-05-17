@@ -570,7 +570,7 @@ export default function AtelieWebsite() {
             {/* BLOQUE 4: GARANTÍA (Destacado) */}
             <div style={{ background: "#fdfdfd", padding: isMobile ? "30px 20px" : "40px 60px", borderRadius: "20px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.03)", marginBottom: "40px" }}>
               <h4 style={{ fontSize: "18px", fontWeight: "600", color: "#d4af37", marginBottom: "15px", letterSpacing: "1px", textAlign: "center" }}>GARANTÍA DE POR VIDA</h4>
-              <div style={{ maxWidth: "850px", margin: "0 auto", lineHeight: "1.7", color: "#666", fontSize: "15px", display: "flex", flexDirection: "column", gap: "15px", textAlign: "center" }}>
+              <div style={{ maxWidth: "850px", margin: "0 auto", lineHeight: "1.7", color: "#666", fontSize: "15px", display: "flex", flexDirection: "column", gap: "15px", textAlign: "justify" }}>
                 <p style={{ margin: 0 }}>
                   En Atelié Joyería confiamos en la excelencia de nuestros materiales y procesos de fabricación. Por ello, ofrecemos garantía de por vida sobre la autenticidad e integridad de los materiales y piedras utilizadas en nuestras joyas.
                 </p>
