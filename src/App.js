@@ -121,7 +121,7 @@ export default function AtelieWebsite() {
       agendar: "agendar",
       personalizar: "personalizar"
     };
-    link.href = `https://www.atelie.com.co/${paths[view] || ""}`;
+    link.href = `https://atelie.com.co/${paths[view] || ""}`;
 
     // Notificar a Google Analytics sobre el cambio de "página" (vista interna)
     if (window.gtag) {

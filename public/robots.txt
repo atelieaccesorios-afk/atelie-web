@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.atelie.com.co/sitemap.xml
+Sitemap: https://atelie.com.co/sitemap.xml
