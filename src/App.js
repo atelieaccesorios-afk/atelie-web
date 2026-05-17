@@ -91,9 +91,19 @@ export default function AtelieWebsite() {
       compromiso: "Anillos de Compromiso en Oro 18K | Catálogo Exclusivo Atelié",
       matrimonio: "Argollas de Matrimonio en Oro 18K | Símbolos de Amor Eterno",
       servicios: "Servicios de Joyería | Reparación y Mantenimiento Atelié",
-      personalizar: "Cotiza tu Diseño Personalizado | Anillos a Medida Atelié"
+      personalizar: "Cotiza tu Diseño Personalizado | Anillos a Medida Atelié",
+      agendar: "Agendar Cita de Diseño | Atención Personalizada Atelié"
     };
     document.title = titulos[view] || "Atelié Joyería";
+
+    // Manejo de la etiqueta robots para permitir indexación
+    let robots = document.querySelector("meta[name='robots']");
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.name = "robots";
+      document.head.appendChild(robots);
+    }
+    robots.content = "index,follow";
 
     // Manejo de la etiqueta canonical para SEO
     let link = document.querySelector("link[rel='canonical']");
@@ -102,7 +112,16 @@ export default function AtelieWebsite() {
       link.rel = "canonical";
       document.head.appendChild(link);
     }
-    link.href = "https://www.atelie.com.co/";
+    const paths = {
+      home: "",
+      nosotros: "nosotros",
+      compromiso: "anillos-compromiso",
+      matrimonio: "argollas-matrimonio",
+      servicios: "servicios",
+      agendar: "agendar",
+      personalizar: "personalizar"
+    };
+    link.href = `https://www.atelie.com.co/${paths[view] || ""}`;
 
     // Notificar a Google Analytics sobre el cambio de "página" (vista interna)
     if (window.gtag) {
