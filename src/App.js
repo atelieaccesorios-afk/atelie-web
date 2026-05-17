@@ -91,8 +91,7 @@ export default function AtelieWebsite() {
       compromiso: "Anillos de Compromiso en Oro 18K | Catálogo Exclusivo Atelié",
       matrimonio: "Argollas de Matrimonio en Oro 18K | Símbolos de Amor Eterno",
       servicios: "Servicios de Joyería | Reparación y Mantenimiento Atelié",
-      personalizar: "Cotiza tu Diseño Personalizado | Anillos a Medida Atelié",
-      agendar: "Agendar Cita de Diseño | Atención Personalizada Atelié"
+      personalizar: "Cotiza tu Diseño Personalizado | Anillos a Medida Atelié"
     };
     document.title = titulos[view] || "Atelié Joyería";
 
@@ -416,11 +415,6 @@ export default function AtelieWebsite() {
                 <h4 style={{ fontSize: "14px", letterSpacing: "1px", marginBottom: "10px" }}>CERTIFICACIÓN</h4>
                 <p style={{ fontSize: "14px", color: "#666", lineHeight: "1.6" }}>Diamantes y esmeraldas con certificación de autenticidad.</p>
               </div>
-              <div>
-                <div style={{ color: "#d4af37", marginBottom: "20px" }}><FaAward size={35} /></div>
-                <h4 style={{ fontSize: "14px", letterSpacing: "1px", marginBottom: "10px" }}>PREMIOS Y RECONOCIMIENTOS</h4>
-                <p style={{ fontSize: "14px", color: "#666", lineHeight: "1.6" }}>Reconocidos por nuestra excelencia en matrimonio.com.co</p>
-              </div>
             </div>
           </section>
 
@@ -499,9 +493,9 @@ export default function AtelieWebsite() {
 
       {view === "nosotros" && (
         <>
-          <section style={{ padding: "30px 24px 80px", maxWidth: "1100px", margin: "0 auto" }}>
+          <section style={{ padding: "30px 24px 0", maxWidth: "1100px", margin: "0 auto" }}>
             <h2 style={{ textAlign: "center", fontWeight: "bold", marginBottom: "35px", letterSpacing: "4px", fontFamily: "'Times New Roman', Times, serif" }}>QUIÉNES SOMOS</h2>
-            <div style={{ textAlign: "justify", maxWidth: "900px", margin: "0 auto 40px", fontSize: "16px", lineHeight: "1.6", color: "#444", display: "flex", flexDirection: "column", gap: "10px" }}>
+            <div style={{ textAlign: "justify", maxWidth: "900px", margin: "0 auto 20px", fontSize: "16px", lineHeight: "1.6", color: "#444", display: "flex", flexDirection: "column", gap: "10px" }}>
               <p style={{ margin: 0 }}>
                 ATELIÊ es una marca familiar fundada en 2010 en Medellín, donde la tradición artesanal y el diseño contemporáneo se unen para crear joyas que trascienden el tiempo.
               </p>
@@ -514,7 +508,7 @@ export default function AtelieWebsite() {
             </div>
 
             {/* BLOQUE 1: TALLER Y GARANTÍA (Imagen Izquierda) */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center", marginBottom: "70px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center", marginBottom: "40px" }}>
               <div 
                 style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 10px 40px rgba(0,0,0,0.08)", border: "1px solid #f0f0f0", cursor: "pointer" }}
                 onClick={() => setSelectedImage(process.env.PUBLIC_URL + "/nosotros-atelie.jpg")}
@@ -530,18 +524,12 @@ export default function AtelieWebsite() {
                     Nuestras joyas nacen en el corazón de nuestro taller propio en Medellín. Al controlar cada etapa de la fabricación, garantizamos que cada anillo cumpla con los más altos estándares de calidad y trazabilidad, transformando materiales nobles en símbolos de amor.
                   </p>
                 </div>
-                <div style={{ paddingTop: "20px", borderTop: "1px solid #eee" }}>
-                  <h4 style={{ fontSize: "18px", fontWeight: "600", color: "#d4af37", marginBottom: "10px", letterSpacing: "1px" }}>GARANTÍA PARA TODA LA VIDA</h4>
-                  <p style={{ margin: 0, fontSize: "15px", color: "#666", lineHeight: "1.6" }}>
-                    Confiamos en la excelencia de nuestra técnica. Otorgamos garantía de por vida para los materiales y piedras, asegurando que tu joya conserve su integridad y belleza a través del tiempo.
-                  </p>
-                </div>
               </div>
             </div>
 
             {/* BLOQUE 2: PROCESO ARTESANAL (Imagen Derecha) */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center", marginBottom: "70px" }}>
-              <div style={{ order: 2 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center", marginBottom: "40px" }}>
+              <div style={{ order: isMobile ? 1 : 2 }}>
                 <div 
                   style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 10px 40px rgba(0,0,0,0.08)", border: "1px solid #f0f0f0", cursor: "pointer" }}
                   onClick={() => setSelectedImage(process.env.PUBLIC_URL + "/Proceso artesanal.png")}
@@ -551,7 +539,7 @@ export default function AtelieWebsite() {
                     onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.03)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"} />
                 </div>
               </div>
-              <div style={{ order: 1 }}>
+              <div style={{ order: isMobile ? 2 : 1 }}>
                 <h4 style={{ fontSize: "18px", fontWeight: "600", color: "#d4af37", marginBottom: "10px", letterSpacing: "1px" }}>PROCESO ARTESANAL</h4>
                 <p style={{ lineHeight: "1.6", color: "#666", fontSize: "15px", margin: 0, textAlign: "justify" }}>
                   Creemos que las piezas más especiales requieren tiempo, precisión y dedicación. Por eso, cada joya es elaborada artesanalmente en nuestro taller, cuidando cada etapa del proceso con pasión y excelencia.
@@ -562,7 +550,7 @@ export default function AtelieWebsite() {
             </div>
 
             {/* BLOQUE 3: RELACIÓN (Imagen Izquierda) */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "45px", alignItems: "center", marginBottom: "40px" }}>
               <div 
                 style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 10px 40px rgba(0,0,0,0.08)", border: "1px solid #f0f0f0", cursor: "pointer" }}
                 onClick={() => setSelectedImage(process.env.PUBLIC_URL + "/relacion.png")}
@@ -575,6 +563,19 @@ export default function AtelieWebsite() {
                 <h4 style={{ fontSize: "18px", fontWeight: "600", color: "#d4af37", marginBottom: "10px", letterSpacing: "1px" }}>RELACIÓN PARA TODA LA VIDA</h4>
                 <p style={{ margin: 0, fontSize: "15px", color: "#666", lineHeight: "1.6", textAlign: "justify" }}>
                   Nuestro compromiso continúa mucho después de la entrega. Ofrecemos un vínculo permanente que incluye servicios de limpieza profesional y revisión técnica de engastes cada 6 meses sin costo adicional. Queremos acompañarte en el cuidado de tus joyas para que brillen como el primer día.
+                </p>
+              </div>
+            </div>
+
+            {/* BLOQUE 4: GARANTÍA (Destacado) */}
+            <div style={{ background: "#fdfdfd", padding: isMobile ? "30px 20px" : "40px 60px", borderRadius: "20px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.03)", marginBottom: "40px" }}>
+              <h4 style={{ fontSize: "18px", fontWeight: "600", color: "#d4af37", marginBottom: "15px", letterSpacing: "1px", textAlign: "center" }}>GARANTÍA DE POR VIDA</h4>
+              <div style={{ maxWidth: "850px", margin: "0 auto", lineHeight: "1.7", color: "#666", fontSize: "15px", display: "flex", flexDirection: "column", gap: "15px", textAlign: "center" }}>
+                <p style={{ margin: 0 }}>
+                  En Atelié Joyería confiamos en la excelencia de nuestros materiales y procesos de fabricación. Por ello, ofrecemos garantía de por vida sobre la autenticidad e integridad de los materiales y piedras utilizadas en nuestras joyas.
+                </p>
+                <p style={{ margin: 0 }}>
+                  La garantía cubre exclusivamente defectos de fabricación y calidad del material. No cubre daños ocasionados por uso inadecuado, golpes, accidentes, rayones, deformaciones, desgaste natural, exposición a químicos o manipulación por terceros.
                 </p>
               </div>
             </div>
@@ -684,7 +685,7 @@ export default function AtelieWebsite() {
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "40px", alignItems: "flex-start" }}>
             {/* Columna Izquierda: Imagen */}
-            <div style={{ flex: "0.7", minWidth: "280px", textAlign: "center", position: isMobile ? "static" : "sticky", top: isMobile ? "auto" : "120px" }}>
+            <div style={{ flex: "1", minWidth: isMobile ? "100%" : "280px", textAlign: "center", position: isMobile ? "static" : "sticky", top: isMobile ? "auto" : "120px", marginBottom: isMobile ? "20px" : "0" }}>
               <div style={{ background: "#fdfdfd", padding: "20px", borderRadius: "20px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
                 <img src={quotedImage || (process.env.PUBLIC_URL + "/atelie_Logo.png")} alt="Referencia" style={{ width: "100%", maxHeight: "320px", objectFit: "contain", borderRadius: "10px" }} />
                 <p style={{ marginTop: "15px", fontWeight: "600", color: "#d4af37", letterSpacing: "1px" }}>{referencia || "Personaliza tu joya"}</p>
@@ -886,9 +887,11 @@ export default function AtelieWebsite() {
             </div>
           </div>
           <div onClick={() => { setView("agendar"); window.scrollTo(0, 0); }} style={{ cursor: "pointer" }}>
+          <div>
             <h4 style={{ color: "#d4af37", marginBottom: "30px", letterSpacing: "2px" }}>UBICACIÓN</h4>
-            <p style={{ color: "#ccc", fontSize: "15px", lineHeight: "1.8" }}>Cra. 83B No. 32 EE-35<br />Laureles la Castellana<br />Medellín, Colombia<br />Telefono/whatsapp: +(54) 316 255-9987</p>
+            <p style={{ color: "#ccc", fontSize: "15px", lineHeight: "1.8" }}>Cra. 83B No. 32 EE-35<br />Laureles la Castellana<br />Medellín, Colombia<br />Telefono/whatsapp: +(57) 316 255-9987</p>
           </div>
+        </div>
         </div>
       </footer>
 
