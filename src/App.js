@@ -320,9 +320,6 @@ export default function AtelieWebsite() {
               <h2 style={{ fontSize: "22px", fontWeight: "bold", fontFamily: "'Times New Roman', Times, serif", color: "#222", letterSpacing: "1px", margin: 0 }}>
                 RECONOCIDOS POR NUESTRA CALIDAD Y SERVICIO
               </h2>
-              <p style={{ fontSize: "15px", color: "#666", fontWeight: "300", margin: 0 }}>
-                Premio otorgados por parejas en matrimonio.com.co
-              </p>
             </div>
           </section>
 
@@ -609,9 +606,6 @@ export default function AtelieWebsite() {
               <h2 style={{ fontSize: "22px", fontWeight: "bold", fontFamily: "'Times New Roman', Times, serif", color: "#222", letterSpacing: "1px", margin: 0 }}>
                 RECONOCIDOS POR NUESTRA CALIDAD Y SERVICIO
               </h2>
-              <p style={{ fontSize: "15px", color: "#666", fontWeight: "300", margin: 0 }}>
-                Premio otorgados por parejas en matrimonio.com.co
-              </p>
             </div>
           </section>
         </>
@@ -690,7 +684,7 @@ export default function AtelieWebsite() {
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "40px", alignItems: "flex-start" }}>
             {/* Columna Izquierda: Imagen */}
-            <div style={{ flex: "0.7", minWidth: "280px", textAlign: "center", position: "sticky", top: "120px" }}>
+            <div style={{ flex: "0.7", minWidth: "280px", textAlign: "center", position: isMobile ? "static" : "sticky", top: isMobile ? "auto" : "120px" }}>
               <div style={{ background: "#fdfdfd", padding: "20px", borderRadius: "20px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
                 <img src={quotedImage || (process.env.PUBLIC_URL + "/atelie_Logo.png")} alt="Referencia" style={{ width: "100%", maxHeight: "320px", objectFit: "contain", borderRadius: "10px" }} />
                 <p style={{ marginTop: "15px", fontWeight: "600", color: "#d4af37", letterSpacing: "1px" }}>{referencia || "Personaliza tu joya"}</p>
@@ -887,8 +881,8 @@ export default function AtelieWebsite() {
             <div style={{ display: "flex", flexDirection: "column", gap: "25px" }}>
               <a href={`https://wa.me/${WHATSAPP_NUMERO}`} target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaWhatsapp size={22} /> WhatsApp Ateliê</a>
               <a href="mailto:contacto@atelie.com.co" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaEnvelope size={22} /> contacto@atelie.com.co</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaInstagram size={22} /> Instagram</a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaFacebook size={22} /> Facebook</a>
+              <a href="https://www.instagram.com/atelie.accesorios/" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaInstagram size={22} /> Instagram</a>
+              <a href="https://www.facebook.com/atelieaccesorios" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaFacebook size={22} /> Facebook</a>
             </div>
           </div>
           <div onClick={() => { setView("agendar"); window.scrollTo(0, 0); }} style={{ cursor: "pointer" }}>
