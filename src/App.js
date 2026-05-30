@@ -43,7 +43,7 @@ const matrimonio = Array.from({ length: 75 }, (_, i) => {
 });
 
 const BENEFICIOS_NOSOTROS = [
-  { Icon: FaTools, titulo: "MANTENIMIENTO DE POR VIDA", texto: "Mantenimiento de por vida para anillos de matrimonio." },
+  { Icon: FaTools, titulo: "MANTENIMIENTO DE POR VIDA", texto: "Mantenimiento de por vida para los anillos de compromiso y argollas de matrimonio" },
   { Icon: GiCutDiamond, titulo: "DIAMANTES CERTIFICADOS", texto: "Certificamos diamantes después de 0,5 quilates." },
   { Icon: GiEmerald, titulo: "ESMERALDAS CERTIFICADAS", texto: "Esmeraldas de alta calidad, certificamos después de 0,5 quilates." },
   { Icon: FaLeaf, titulo: "ORO SOSTENIBLE", texto: "Oro de origen sostenible, con trazabilidad completa." },
@@ -319,7 +319,7 @@ export default function AtelieWebsite() {
             <img src={process.env.PUBLIC_URL + "/hero-inicio.webp"} alt="Pareja con anillo de compromiso Atelié Joyería oro 18k" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center" : "left center" }} />
             <div style={{ position: "absolute", inset: 0, background: isMobile ? "rgba(0,0,0,0.4)" : "rgba(0,0,0,0.25)", display: "flex", flexDirection: "column", alignItems: isMobile ? "center" : "flex-start", justifyContent: "center", color: "white", padding: isMobile ? "0 20px" : "0 6%" }}>
               <div style={{ textAlign: isMobile ? "center" : "left", maxWidth: "480px" }}>
-                <span style={{ fontSize: "12px", fontWeight: "600", color: "#d4af37", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>— ANILLOS QUE MARCAN TU HISTORIA</span>
+                <span style={{ fontSize: "12px", fontWeight: "600", color: "#d4af37", letterSpacing: "2px", marginBottom: "10px", display: "block" }}>— ANILLOS QUE MARCAN TU HISTORIA —</span>
                 <h1 style={{ fontWeight: "300", fontSize: "clamp(22px, 3.8vw, 38px)", marginBottom: "12px", letterSpacing: "2px", lineHeight: "1.2", fontFamily: "'Times New Roman', Times, serif" }}>Anillos de compromiso<br />y argollas de matrimonio en <span style={{ color: "#d4af37" }}>oro 18K</span></h1>
                 <p style={{ fontSize: "clamp(12px, 1.3vw, 15px)", marginBottom: "30px", fontWeight: "300", opacity: 0.85, lineHeight: "1.6" }}>Diseñamos piezas únicas en Medellín que representan<br />momentos inolvidables con elegancia, calidad y significado.</p>
                 <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", justifyContent: isMobile ? "center" : "flex-start" }}>
@@ -421,8 +421,8 @@ export default function AtelieWebsite() {
               </div>
               <div>
                 <div style={{ color: "#d4af37", marginBottom: "20px" }}><FaShieldAlt size={35} /></div>
-                <h4 style={{ fontSize: "14px", letterSpacing: "1px", marginBottom: "10px" }}>GARANTÍA DE POR VIDA</h4>
-                <p style={{ fontSize: "14px", color: "#666", lineHeight: "1.6" }}>Garantía de por vida en todos nuestros anillos.</p>
+                <h4 style={{ fontSize: "14px", letterSpacing: "1px", marginBottom: "10px" }}>GARANTÍA PARA TODA LA VIDA</h4>
+                <p style={{ fontSize: "14px", color: "#666", lineHeight: "1.6" }}>Garantía para toda la vida en todos nuestros anillos.</p>
               </div>
               <div>
                 <div style={{ color: "#d4af37", marginBottom: "20px" }}><GiHammerBreak size={35} /></div>
@@ -588,10 +588,10 @@ export default function AtelieWebsite() {
 
             {/* BLOQUE 4: GARANTÍA (Destacado) */}
             <div style={{ background: "#fdfdfd", padding: isMobile ? "30px 20px" : "40px 60px", borderRadius: "20px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.03)", marginBottom: "40px" }}>
-              <h4 style={{ fontSize: "18px", fontWeight: "600", color: "#d4af37", marginBottom: "15px", letterSpacing: "1px", textAlign: "center" }}>GARANTÍA DE POR VIDA</h4>
+              <h4 style={{ fontSize: "18px", fontWeight: "600", color: "#d4af37", marginBottom: "15px", letterSpacing: "1px", textAlign: "center" }}>GARANTÍA PARA TODA LA VIDA</h4>
               <div style={{ maxWidth: "850px", margin: "0 auto", lineHeight: "1.7", color: "#666", fontSize: "15px", display: "flex", flexDirection: "column", gap: "15px", textAlign: "justify" }}>
                 <p style={{ margin: 0 }}>
-                  En Atelié Joyería confiamos en la excelencia de nuestros materiales y procesos de fabricación. Por ello, ofrecemos garantía de por vida sobre la autenticidad e integridad de los materiales y piedras utilizadas en nuestras joyas.
+                  En Atelié Joyería confiamos en la excelencia de nuestros materiales y procesos de fabricación. Por ello, ofrecemos garantía para toda la vida sobre la autenticidad e integridad de los materiales y piedras utilizadas en nuestras joyas.
                 </p>
                 <p style={{ margin: 0 }}>
                   La garantía cubre exclusivamente defectos de fabricación y calidad del material. No cubre daños ocasionados por uso inadecuado, golpes, accidentes, rayones, deformaciones, desgaste natural, exposición a químicos o manipulación por terceros.
