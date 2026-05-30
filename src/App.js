@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaInstagram, FaFacebook, FaWhatsapp, FaTools, FaLeaf, FaShieldAlt, FaTruck, FaStar, FaAward, FaEnvelope, FaComments, FaPlus } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaWhatsapp, FaTools, FaLeaf, FaShieldAlt, FaTruck, FaStar, FaAward, FaEnvelope, FaComments, FaPlus, FaPinterest } from "react-icons/fa";
 import { GiCutDiamond, GiEmerald, GiHammerBreak } from "react-icons/gi";
 
 const WHATSAPP_NUMERO = "573162559987";
@@ -903,6 +903,7 @@ export default function AtelieWebsite() {
               <a href="mailto:contacto@atelie.com.co" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaEnvelope size={22} /> contacto@atelie.com.co</a>
               <a href="https://www.instagram.com/atelie.accesorios/" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaInstagram size={22} /> Instagram</a>
               <a href="https://www.facebook.com/atelieaccesorios" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaFacebook size={22} /> Facebook</a>
+              <a href="https://co.pinterest.com/ateliejoyeria/" target="_blank" rel="noreferrer" style={footerLinkStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><FaPinterest size={22} /> Pinterest</a>
             </div>
           </div>
           <div onClick={() => { setView("agendar"); window.scrollTo(0, 0); }} style={{ cursor: "pointer" }}>
